@@ -14,9 +14,15 @@
         "build": "node build/build.js"
     },
     "dependencies": {
+        "echarts": "^4.2.1",
+        "eslint-config-standard": "^13.0.1",
         "eslint-plugin-html": "^5.0.5",
+        "eslint-plugin-node": "^9.1.0",
+        "postcss-cssnext": "^3.1.0",
+        "postcss-nested": "^4.1.2",
         "showdown": "^1.9.0",
-        "vue": "^2.5.2"
+        "vue": "^2.5.2",
+        "vue-echarts": "^4.0.3"
     },
     "devDependencies": {
         "autoprefixer": "^7.1.2",

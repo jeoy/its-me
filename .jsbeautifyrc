@@ -2,10 +2,11 @@
     "html": {
         "brace_style": "collapse",
         "indent_char": " ",
-        "indent_scripts": "normal",
+        "indent_scripts": "keep",
         "indent_size": 4,
         "unformatted": ["a", "sub", "sup", "b", "i", "u"],
-        "wrap_line_length": 0
+        "wrap_line_length": 0,
+        "end_with_newline": true
     },
     "css": {
         "indent_char": " ",
