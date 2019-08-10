@@ -1,4 +1,4 @@
-t<template>
+<template>
     <div class="foot">
         <div class="foot-list" v-for="item in footList" :key="item.iconName">
             <icon-circle :iconName="item.iconName" :fontSize="22" ></icon-circle>
@@ -50,10 +50,14 @@ export default {
         left: 40px;
 
         .foot-list {
+            align-items: center;
+            display: flex;
             color: white;
+            padding-right: 20px;
             margin-bottom: 16px;
 
             span {
+                display: inline-block;
                 margin-left: 10px;
                 font-size: 10px;
             }

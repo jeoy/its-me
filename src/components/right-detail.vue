@@ -35,4 +35,3 @@ export default {
         padding-right: 40px;
     }
 </style>
-

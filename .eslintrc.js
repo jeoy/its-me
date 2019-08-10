@@ -6,6 +6,7 @@ module.exports = {
         parser: 'babel-eslint'
     },
     env: {
+        es6: true,
         browser: true,
     },
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
@@ -33,6 +34,14 @@ module.exports = {
             "exports": "never",
             "functions": "ignore"
         }],
+        "eol-last": "warn",
+
+        "no-misleading-character-class": "0",
+
+        "no-async-promise-executor": "0",
+
+        "no-useless-catch": "0",
+
         "vue/no-parsing-error": [0],
 
         "no-var": ["off"],
@@ -58,6 +67,7 @@ module.exports = {
                 'e' // for e.returnvalue
             ]
         }],
+        "space-before-function-paren": ["error", "never"],
         // allow optionalDependencies
         'import/no-extraneous-dependencies': ['error', {
             optionalDependencies: ['test/unit/index.js']

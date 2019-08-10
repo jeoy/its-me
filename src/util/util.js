@@ -19,7 +19,7 @@ const getGradientColors = (start, end, datas) => {
     var pad = (s) => {
         return (s.length === 1) ? '0' + s : s;
     };
-    var normalize = function (channel) {
+    var normalize = function(channel) {
         return channel / 255;
     };
     const _start = parseColor(start).map(normalize);

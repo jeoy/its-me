@@ -6,7 +6,6 @@
     </div>
 </template>
 
-
 <script>
 export default {
     props: {
@@ -44,4 +43,3 @@ export default {
         align-items: center;
     }
 </style>
-

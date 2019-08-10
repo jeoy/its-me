@@ -1,6 +1,6 @@
 <template>
-    <div class=skill-progress>
-        <v-chart class=skill-bar :options=option />
+    <div class="skill-progress">
+        <v-chart class="skill-bar" :options=option />
         <div class=learning>
             <img :src=learning />
         </div>
