@@ -15,13 +15,14 @@
 
     .skill-bar {
         width: 100%;
-        height: 200px;
+        height: 260px;
     }
 
     .learning {
         margin: 0px auto;
         text-align: center;
-         transform: translateX(10%);
+        transform: translateX(10%);
+
         img {
             width: 100px;
         }
@@ -80,7 +81,7 @@ export default {
             grid: {
                 containLabel: true,
                 top: 'center',
-                height: 200,
+                height: 240,
                 left: 0,
                 right: 0
             },
@@ -91,7 +92,7 @@ export default {
                 color: '#b6813f',
                 symbolMargin: '0%',
                 symbol: 'rect',
-                symbolSize: [30, 10],
+                symbolSize: [32, 12],
                 data: progress
             }, {
                 type: 'pictorialBar',
@@ -99,7 +100,7 @@ export default {
                 symbolRepeat: 'fixed',
                 symbolMargin: '0%',
                 symbolClip: true,
-                symbolSize: [30, 10],
+                symbolSize: [32, 12],
                 data: progress
             }]
         };

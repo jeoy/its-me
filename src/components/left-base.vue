@@ -20,6 +20,7 @@
                 <p>{{resumeData.applyPosition}}</p>
             </div>
             <skill-progress :skills="resumeData.skillProgress"></skill-progress>
+            <ability-wordcloud :ability="resumeData.abilityWordCloud"></ability-wordcloud>
             <foot :contact="resumeData.contact"></foot>
         </div>
     </div>
@@ -29,11 +30,13 @@
 import skillProgress from './skill-progress';
 import foot from './foot';
 import resumeData from '../../data/resumeData.json';
+import abilityWordcloud from './ability-wordcloud';
 
 export default {
     name: 'left-base-info',
     components: {
         skillProgress,
+        abilityWordcloud,
         foot
     },
     data() {
@@ -71,7 +74,7 @@ export default {
     width: 100%;
 
     p {
-        font-size: 60px;
+        font-size: 70px;
         color: white;
     }
 }
@@ -86,7 +89,7 @@ export default {
     }
 
     i {
-        font-size: 20px;
+        font-size: 24px;
         margin-left: 5px;
         color: #936d3d;
 
@@ -102,13 +105,13 @@ export default {
     margin: 0 30px 0 30px;
 
     p {
-        font-size: 18px;
+        font-size: 24px;
 
         +p {
-            font-size: 14px;
+            font-size: 18px;
 
             +p {
-                font-size: 12px;
+                font-size: 14px;
             }
         }
     }
@@ -116,6 +119,7 @@ export default {
 
 .position {
     margin: 16px;
+    font-size: 24px;
     color: #f6e2b9;
 }
 

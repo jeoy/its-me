@@ -21,9 +21,9 @@ export default {
 
 <style>
 html,body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    height: 100%;
+    height: 1120px;
 }
 
 p,span{
@@ -33,19 +33,27 @@ p,span{
 }
 
 #app {
-    display: flex;
-    height: 100%;
+    width: 800px;
+    height: 1140px;
+    margin: 0 auto;
 }
+
 .left-pannel {
-    flex: 4;
+    position: relative;
+    width: 320px;
+    box-sizing: border-box;
 }
 
 .right-pannel {
-    flex: 5;
+    width: 480px;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
 .pannel {
+    float: left;
     padding: 20px;
+    height: 1140px;
     padding-top: 40px;
 }
 </style>

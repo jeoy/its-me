@@ -44,13 +44,20 @@ export default {
 </script>
 
 <style>
-    .foot-list {
-        color: white;
-        margin-bottom: 16px;
+    .foot {
+        position: absolute;
+        bottom: 20px;
+        left: 40px;
 
-        span {
-            margin-left: 20px;
-            font-size: 10px;
+        .foot-list {
+            color: white;
+            margin-bottom: 16px;
+
+            span {
+                margin-left: 10px;
+                font-size: 10px;
+            }
         }
     }
+
 </style>

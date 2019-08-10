@@ -10,7 +10,7 @@ module.exports = {
     },
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
     // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    extends: ['plugin:vue/essential', 'airbnb-base'],
+    extends: ['plugin:vue/essential', 'standard'],
     // required to lint *.vue files
     plugins: [
         'vue',
@@ -42,6 +42,7 @@ module.exports = {
                 "SwitchCase": 1
             }
         ],
+        semi: ["error", "always"],
         // don't require .vue extension when importing
         'import/extensions': ['error', 'always', {
             js: 'never',

@@ -49,7 +49,7 @@ export default {
     .title-icon {
         position: absolute;
         left: -32px;
-        top: 4px;
+        top: 6px;
         color: #c3985d;
         font-size: 25px;
     }
@@ -63,17 +63,19 @@ export default {
         margin-bottom: 24px;
 
         .project-name {
+            font-size: 20px;
             color: #c3985d;
             margin-bottom: 6px;
         }
 
         .project-date-range {
+            font-size: 14px;
             color: #c3985d;
             margin-bottom: 4px;
         }
 
         .project-context {
-            font-size: 10px;
+            font-size: 14px;
         }
     }
 }

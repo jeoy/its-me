@@ -32,6 +32,7 @@ export default {
     .right-detail {
         background: #f1eee8;
         padding-left: 50px;
+        padding-right: 40px;
     }
 </style>
 
