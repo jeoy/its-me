@@ -32,6 +32,10 @@ export default {
                 iconName: 'iconstackoverflow',
                 info: this.contact.stackoverflow,
                 fontSize: 10
+            }, {
+                iconName: 'icongithub',
+                info: this.contact.github,
+                fontSize: 12
             }]
         };
     },
