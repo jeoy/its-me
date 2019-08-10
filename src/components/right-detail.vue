@@ -31,6 +31,7 @@ export default {
 <style>
     .right-detail {
         background: #f1eee8;
+        padding-top: 80px;
         padding-left: 50px;
         padding-right: 40px;
     }

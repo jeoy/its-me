@@ -11,6 +11,9 @@ t<template>
             <div class="project-date-range">
                 <span>{{project.dateRange}}</span>
             </div>
+            <div class="project-tag" >
+                <tag v-for="tag in project.tags" :key="tag" :name="tag" ></tag>
+            </div>
             <div class="project-context">
                 <span v-html="project.context"></span>
             </div>
@@ -19,8 +22,12 @@ t<template>
 </template>
 
 <script>
+import tag from 'components/common/tag';
 
 export default {
+    components: {
+        tag
+    },
     props: {
         title: {
             type: Object
@@ -62,6 +69,9 @@ export default {
     .project-block {
         margin-bottom: 24px;
 
+        .project-tag {
+            font-size: 12px;
+        }
         .project-name {
             font-size: 20px;
             color: #c3985d;
