@@ -29,7 +29,7 @@
 <script>
 import skillProgress from './skill-progress';
 import foot from './foot';
-import resumeData from '../../data/resumeData.json';
+import resumeData from '../../demo/demoData.json';
 import abilityWordcloud from './ability-wordcloud';
 
 export default {
@@ -105,6 +105,7 @@ export default {
     margin: 0 30px 0 30px;
 
     p {
+        white-space: nowrap;
         font-size: 24px;
 
         +p {

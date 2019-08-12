@@ -18,4 +18,8 @@ yarn install
 npm start
 ```
 
+### Demo
+
+[click here](https://jeoy.github.io/its-me/demo/)
+
  

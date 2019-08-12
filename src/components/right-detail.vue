@@ -8,7 +8,7 @@ t<template>
 
 <script>
 import rightSection from './right-section';
-import resumeData from '../../data/resumeData.json';
+import resumeData from '../../demo/demoData.json';
 
 export default {
     name: 'right-detail',
@@ -31,7 +31,7 @@ export default {
 <style>
     .right-detail {
         background: #f1eee8;
-        padding-top: 80px;
+        padding-top: 60px;
         padding-left: 50px;
         padding-right: 40px;
     }

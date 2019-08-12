@@ -1,6 +1,6 @@
 <template>
     <div class="foot">
-        <div class="foot-list" v-for="item in footList" :key="item.iconName">
+        <div class="foot-list" v-for="item in footList" v-show=item.info :key="item.iconName">
             <icon-circle :iconName="item.iconName" :fontSize="22" ></icon-circle>
             <span :style="{'font-size': `${item.fontSize || 14}px`}">{{item.info}}</span>
         </div>

@@ -1,0 +1,153 @@
+{
+    "name": "马里奥",
+    "bascialEducation": {
+        "school": "五道口职业技术学院",
+        "major": "计算机系",
+        "degree": "硕士研究生"
+    },
+    "applyPosition": "web前端开发",
+    "skillProgress": [{
+        "name": "HTML5",
+        "progress": 65
+    }, {
+        "name": "CSS1",
+        "progress": 40
+    }, {
+        "name": "Javascript",
+        "progress": 60
+    }, {
+        "name": "Vue",
+        "progress": 55
+    }, {
+        "name": "React-Native",
+        "progress": 80
+    }, {
+        "name": "Node",
+        "progress": 70
+    }, {
+        "name": "Network",
+        "progress": 30
+    }, {
+        "name": "Algorithm",
+        "progress": 65
+    }],
+    "abilityWordCloud": [{
+        "name": "创意",
+        "value": 40
+    }, {
+        "name": "互联网",
+        "value": 22
+    }, {
+        "name": "学习能力",
+        "value": 35
+    }, {
+        "name": "深入浅出Nodejs",
+        "value": 44
+    }, {
+        "name": "team work",
+        "value": 85
+    }, {
+        "name": "javascript高级程序设计",
+        "value": 40
+    }, {
+        "name": "沟通能力",
+        "value": 32
+    }, {
+        "name": "源代码",
+        "value": 46
+    }, {
+        "name": "HTTPS",
+        "value": 45
+    }, {
+        "name": "语法",
+        "value": 50
+    }, {
+        "name": "操作系统",
+        "value": 23
+    }, {
+        "name": "热情",
+        "value": 24
+    }, {
+        "name": "网络原理",
+        "value": 22
+    }, {
+        "name": "Business Intelligence",
+        "value": 34
+    }, {
+        "name": "stack overflow",
+        "value": 22
+    }, {
+        "name": "掘金",
+        "value": 20
+    }, {
+        "name": "segmentfault",
+        "value": 27
+    }, {
+        "name": "algorithm",
+        "value": 26
+    }, {
+        "name": "git flow",
+        "value": 32
+    }, {
+        "name": "sonarqube",
+        "value": 34
+    }, {
+        "name": "sonarqube",
+        "value": 6
+    }],
+    "contact": {
+        "phone": "+86 1001300120",
+        "email": "itsAfakeAddress@gmail.com",
+        "github": "https://github.com/jeoy/its-me"
+    },
+    "projects": [{
+        "title": {
+            "name": "教育经历",
+            "iconName": "iconeducation"
+        },
+        "data": [{
+            "name": "五道口职业技术学院",
+            "dateRange": "2014-08 ~ 2017-06",
+            "context": "计算机系  — 硕士研究生"
+        }, {
+            "name": "中关村应用文理学院",
+            "dateRange": "2010-08 ~ 2014-06",
+            "context": "计算机系 — 本科生"
+        }]
+    }, {
+        "title": {
+            "name": "工作经历",
+            "iconName": "iconcode"
+        },
+        "data": [{
+            "name": "知名互联网公司1",
+            "dateRange": "2019-03 ~ 至今",
+            "context": "职位：web 前端开发"
+        }, {
+            "name": "不知名互联网公司2",
+            "dateRange": "2017-07 ~ 2019-03",
+            "context": "职位：web 前端开发"
+        }]
+    }, {
+        "title": {
+            "name": "项目经历",
+            "iconName": "iconcode"
+        },
+        "data": [{
+            "name": "核心项目1",
+            "tags": ["forage", "Schlitz", "cliche"],
+            "context": "Meggings forage bicycle rights shabby chic Schlitz readymade YOLO brunch fanny pack cliche meggings whatever",
+            "contextIndent": true
+        }, {
+            "name": "核心项目2",
+            "tags": ["Wes-vegan", "Banksy"],
+            "context": "Biodiesel selfies Wes Anderson before they sold out Banksy fap lomo keytar High Life art party freegan direct trade Intelligentsia mixtape twee fixie paleo food truck American Apparel Etsy selvage veganr pour-over",
+            "contextIndent": true
+        }, {
+            "name": "核心项目3",
+            "tags": ["locavore", "swag-fixie", "mumblecore"],
+            "context": "Etsy artisan swag Shoreditch authentic scenester mumblecore fixie organic locavore tarter Banksy gastropub Odd Future Tonx bitters Pinterest meggings yr plaid raw denim Echo Park VHS Tumblr kogi food rty dreamcatcher wolf jean shorts vegan pour-over",
+            "contextIndent": true
+        }]
+    }]
+}
