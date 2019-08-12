@@ -14,7 +14,7 @@ t<template>
             <div class="project-tag" >
                 <tag v-for="tag in project.tags" :key="tag" :name="tag" ></tag>
             </div>
-            <div class="project-context">
+            <div class="project-context" :class="{'context-indent': project.contextIndent}">
                 <span v-html="project.context"></span>
             </div>
         </div>
@@ -86,6 +86,10 @@ export default {
 
         .project-context {
             font-size: 14px;
+        }
+
+        .context-indent {
+            text-indent: 28px;
         }
     }
 }

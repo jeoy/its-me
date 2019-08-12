@@ -35,6 +35,7 @@ p,span{
 #app {
     width: 800px;
     height: 1130px;
+    overflow: hidden;
     margin: 0 auto;
 }
 
@@ -53,7 +54,7 @@ p,span{
 .pannel {
     float: left;
     padding: 20px;
-    height: 1130px;
+    height: 1140px;
     padding-top: 40px;
 }
 </style>

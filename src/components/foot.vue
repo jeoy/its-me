@@ -61,6 +61,7 @@ export default {
             margin-bottom: 16px;
 
             span {
+                word-break: break-word;
                 display: inline-block;
                 margin-left: 10px;
                 font-size: 10px;
