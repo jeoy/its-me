@@ -1,20 +1,19 @@
 <template>
 <div id="app">
-    <!-- <markdown /> -->
-    <left-base class="left-pannel pannel"></left-base>
-    <right-detail class="right-pannel pannel"></right-detail>
+    <tool-panel></tool-panel>
+    <main-page></main-page>
 </div>
 </template>
 
 <script>
-import leftBase from './components/left-base';
-import rightDetail from './components/right-detail';
+import mainPage from './components/main-page';
+import toolPanel from './components/tool-panel';
 
 export default {
     name: 'App',
     components: {
-        leftBase,
-        rightDetail
+        mainPage,
+        toolPanel
     }
 };
 </script>
@@ -32,29 +31,4 @@ p,span{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#app {
-    width: 800px;
-    height: 1130px;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-.left-pannel {
-    position: relative;
-    width: 320px;
-    box-sizing: border-box;
-}
-
-.right-pannel {
-    width: 480px;
-    box-sizing: border-box;
-    display: inline-block;
-}
-
-.pannel {
-    float: left;
-    padding: 20px;
-    height: 1140px;
-    padding-top: 40px;
-}
 </style>
