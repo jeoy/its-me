@@ -56,19 +56,6 @@ export default {
     background: #c3985d;
 }
 
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-center-column {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .name {
     height: 80px;
     width: 100%;

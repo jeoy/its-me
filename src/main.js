@@ -3,7 +3,11 @@
 import Vue from 'vue';
 import App from './App';
 import './assets/css/iconfont/iconfont.css';
+import {
+    Button
+} from 'ant-design-vue';
 
+Vue.use(Button);
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

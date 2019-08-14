@@ -1,13 +1,13 @@
 <template>
     <div class="tool-panel">
-        <button @click="print">打印页面 </button>
+        <a-button @click="printResume">Hello world!</a-button>
     </div>
 </template>
 
 <script>
 export default {
     methods: {
-        print() {
+        printResume() {
             window.print();
         }
     }

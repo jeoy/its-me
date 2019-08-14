@@ -36,10 +36,4 @@ export default {
             height: 30px;
         }
     }
-
-    .flex-center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 </style>

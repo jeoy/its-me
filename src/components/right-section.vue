@@ -72,6 +72,7 @@ export default {
         .project-tag {
             font-size: 12px;
         }
+
         .project-name {
             font-size: 20px;
             color: #c3985d;
