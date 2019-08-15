@@ -15,13 +15,15 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
+    @import '~src/assets/css/theme.less';
+
     .tag {
-        background: #c3985d;
+        background: @tag-bg-color;
         display: inline-block;
         border-radius: 5px;
         padding: 2px 4px;
-        color: #f6e2b9;
+        color: @icon-color;
         margin-bottom: 10px;
         margin-right: 5px;
     }

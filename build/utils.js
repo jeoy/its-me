@@ -58,7 +58,9 @@ exports.cssLoaders = function (options) {
     return {
         css: generateLoaders(),
         postcss: generateLoaders('css'),
-        less: generateLoaders('less'),
+        less: generateLoaders('less', {
+            javascriptEnabled: true,
+        }),
         sass: generateLoaders('sass', {
             indentedSyntax: true
         }),

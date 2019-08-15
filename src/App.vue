@@ -18,6 +18,6 @@ export default {
 };
 </script>
 
-<style>
-    @import "./App.css";
+<style lang="less">
+    @import "./App.less";
 </style>

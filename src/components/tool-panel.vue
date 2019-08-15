@@ -1,6 +1,6 @@
 <template>
     <div class="tool-panel">
-        <a-button @click="printResume">Hello world!</a-button>
+        <a-button primary @click="printResume">打印简历</a-button>
     </div>
 </template>
 

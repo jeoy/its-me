@@ -28,9 +28,11 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
+    @import '~src/assets/css/theme.less';
+
     .right-detail {
-        background: #f1eee8;
+        background: @right-pannel-background;
         padding-top: 60px;
         padding-left: 50px;
         padding-right: 40px;

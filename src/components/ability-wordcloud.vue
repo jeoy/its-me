@@ -17,7 +17,7 @@ export default {
     },
     mounted() {
         var chart = echarts.init(this.$refs.wordCloud);
-        var colors = getGradientColors('#f6e2b9', '#9e7542', this.ability.map(item => item.value));
+        var colors = getGradientColors('#f6e2b9', '#936d3d', this.ability.map(item => item.value));
         var seriesData = this.ability.map((item, ind) => {
             return {
                 ...item,
