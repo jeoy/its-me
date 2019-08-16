@@ -57,7 +57,7 @@ export default {
     .title-icon {
         position: absolute;
         left: -32px;
-        top: 6px;
+        top: 3px;
         color: @right-pannel-text;
         font-size: 25px;
     }

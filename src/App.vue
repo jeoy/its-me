@@ -1,7 +1,7 @@
 <template>
 <div id="app">
-    <tool-panel></tool-panel>
-    <main-page></main-page>
+    <tool-panel @changeTheme="changeTheme"></tool-panel>
+    <main-page :class="theme"></main-page>
 </div>
 </template>
 
@@ -11,9 +11,19 @@ import toolPanel from './components/tool-panel';
 
 export default {
     name: 'App',
+    data() {
+        return {
+            theme: 'theme-dark-blue'
+        };
+    },
     components: {
         mainPage,
         toolPanel
+    },
+    methods: {
+        changeTheme() {
+            this.theme = 'theme-dark-blue';
+        }
     }
 };
 </script>

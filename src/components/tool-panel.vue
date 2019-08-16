@@ -1,6 +1,7 @@
 <template>
     <div class="tool-panel">
         <a-button primary @click="printResume">打印简历</a-button>
+        <a-button primary @click="changeTheme">改变主题</a-button>
     </div>
 </template>
 
@@ -9,6 +10,9 @@ export default {
     methods: {
         printResume() {
             window.print();
+        },
+        changeTheme() {
+            this.$emit('changeTheme');
         }
     }
 };

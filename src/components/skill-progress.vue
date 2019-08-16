@@ -2,12 +2,14 @@
     <div class="skill-progress">
         <v-chart class="skill-bar" :options=option />
         <div class=learning>
-            <img :src=learning />
+            <p> Learning... </p>
         </div>
     </div>
 </template>
 
-<style>
+<style lang="less">
+@import '~src/assets/css/theme.less';
+
 .skill-progress {
     width: 80%;
     margin: 0 auto;
@@ -22,9 +24,11 @@
         margin: 0px auto;
         text-align: center;
         transform: translateX(10%);
+        color: @light-color;
 
-        img {
-            width: 100px;
+        p {
+            font-weight: 700;
+            margin-top: -10px;
         }
 
     }
@@ -34,8 +38,8 @@
 <script>
 import ECharts from 'vue-echarts';
 import 'echarts/lib/chart/pictorialBar';
-import imgProgress from '../assets/progress.png';
 import learning from '../assets/learning.png';
+import { colorAdd, primary } from 'util/util';
 
 export default {
     components: {
@@ -49,13 +53,16 @@ export default {
     data() {
         return {
             option: {},
+            primary,
             learning
         };
     },
     created() {
-        var imgSrc = `image://${imgProgress}`;
         var catData = this.skills.map(item => item.name);
         var progress = this.skills.map(item => item.progress);
+        var barColor1 = colorAdd(this.primary, '#252525');
+        var barColor2 = colorAdd(this.primary, '#383838');
+        var barBgColor = '#fff';
         this.option = {
             xAxis: {
                 show: false,
@@ -89,18 +96,28 @@ export default {
                 type: 'pictorialBar',
                 animationDuration: 0,
                 symbolRepeat: 'fixed',
-                color: '#b6813f',
+                color: barBgColor,
                 symbolMargin: '0%',
                 symbol: 'rect',
-                symbolSize: [32, 12],
+                symbolSize: [32, 14],
                 data: progress
             }, {
                 type: 'pictorialBar',
-                symbol: imgSrc,
-                symbolRepeat: 'fixed',
+                symbol: 'rect',
+                symbolRepeat: true,
+                color: barColor1,
                 symbolMargin: '0%',
                 symbolClip: true,
-                symbolSize: [32, 12],
+                symbolSize: [32, 14],
+                data: progress
+            }, {
+                type: 'pictorialBar',
+                symbol: 'path://M20,0,40,0,20,50,0,50z',
+                symbolRepeat: 'fixed',
+                color: barColor2,
+                symbolMargin: '0%',
+                symbolClip: true,
+                symbolSize: [30, 14],
                 data: progress
             }]
         };

@@ -6,7 +6,8 @@
 import echarts from 'echarts';
 import 'echarts-wordcloud';
 import {
-    getGradientColors
+    getGradientColors,
+    primary
 } from 'util/util';
 
 export default {
@@ -15,9 +16,14 @@ export default {
             type: Array
         }
     },
+    data() {
+        return {
+            primary
+        };
+    },
     mounted() {
         var chart = echarts.init(this.$refs.wordCloud);
-        var colors = getGradientColors('#f6e2b9', '#936d3d', this.ability.map(item => item.value));
+        var colors = getGradientColors(this.primary, this.ability.map(item => item.value));
         var seriesData = this.ability.map((item, ind) => {
             return {
                 ...item,
@@ -52,6 +58,6 @@ export default {
 .ability-wordcloud {
     width: 90%;
     height: 260px;
-    margin: 0 auto;
+    margin: 18px auto;
 }
 </style>
