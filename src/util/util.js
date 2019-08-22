@@ -1,5 +1,3 @@
-const primary = '#248f97';
-
 const parseColor = (hexStr) => {
     if (Array.isArray(hexStr)) {
         return hexStr;
@@ -165,7 +163,6 @@ const getGradientColors = (color, datas) => {
 export {
     getGradientColors,
     colorAdd,
-    primary,
     HSLRotate,
     colorMinus
 };

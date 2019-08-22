@@ -23,7 +23,6 @@
         "eslint-plugin-node": "^9.1.0",
         "eslint-plugin-promise": "^4.2.1",
         "eslint-plugin-standard": "^4.0.0",
-        "scss": "^3.9.0",
         "less-loader": "^5.0.0",
         "node-sass": "^4.12.0",
         "postcss-cssnext": "^3.1.0",
@@ -31,7 +30,8 @@
         "sass-loader": "^7.3.1",
         "showdown": "^1.9.0",
         "vue": "^2.5.2",
-        "vue-echarts": "^4.0.3"
+        "vue-echarts": "^4.0.3",
+        "vuex": "^3.1.1"
     },
     "devDependencies": {
         "autoprefixer": "^7.1.2",

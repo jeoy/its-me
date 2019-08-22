@@ -312,28 +312,6 @@ ant-design-vue@^1.3.14:
     vue-ref "^1.0.4"
     warning "^3.0.0"
 
-antd-theme-generator@^1.1.5:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/antd-theme-generator/-/antd-theme-generator-1.1.7.tgz#94e287f09593c4b400fcf005cc5c553907f5e9bc"
-  integrity sha512-CVutzy0kh9/ZWUheFzT16dykqNf1xSWOEKswj9VzqJ0YOGrrf7h+6ewUDdHPfugryuyH3LqKywXfMdcoj/XYfQ==
-  dependencies:
-    glob "^7.1.3"
-    hash.js "^1.1.5"
-    less "^3.9.0"
-    less-bundle-promise "1.0.7"
-    less-plugin-npm-import "^2.1.0"
-    postcss "^6.0.21"
-    postcss-colors-only "0.0.3"
-
-antd-theme-webpack-plugin@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/antd-theme-webpack-plugin/-/antd-theme-webpack-plugin-1.2.0.tgz#497dee6399f23455e5dc5c716cff5b791bc6cb5a"
-  integrity sha512-YpvwMWlOlGRhuHNrLM4csqvA7kBh7EaoovYHKybsEgz0qFi08Z2HmGsYTopM/pLdYrqoaqn6MoNkFxHuVGwBEg==
-  dependencies:
-    antd-theme-generator "^1.1.5"
-    less-bundle-promise "1.0.7"
-    postcss "^6.0.21"
-
 antd@^3.22.0:
   version "3.22.0"
   resolved "https://registry.yarnpkg.com/antd/-/antd-3.22.0.tgz#07828fddd40db3516e92868b5e4689215c67a197"
@@ -1892,7 +1870,7 @@ clone@^1.0.2:
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
 
-clone@^2.1.1, clone@^2.1.2:
+clone@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/clone/-/clone-2.1.2.tgz#1b7f4b9f591f1e8f83670401600345a02887435f"
   integrity sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
@@ -1936,11 +1914,6 @@ collection-visit@^1.0.0:
     map-visit "^1.0.0"
     object-visit "^1.0.0"
 
-color-convert@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-0.5.3.tgz#bdb6c69ce660fadffe0b0007cc447e1b9f7282bd"
-  integrity sha1-vbbGnOZg+t/+CwAHzER+G59ygr0=
-
 color-convert@^1.3.0, color-convert@^1.8.2, color-convert@^1.9.0, color-convert@^1.9.1:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
@@ -1972,14 +1945,6 @@ color-string@^1.4.0, color-string@^1.5.2:
   dependencies:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
-
-color@^0.10.1:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/color/-/color-0.10.1.tgz#c04188df82a209ddebccecdacd3ec320f193739f"
-  integrity sha1-wEGI34KiCd3rzOzazT7DIPGTc58=
-  dependencies:
-    color-convert "^0.5.3"
-    color-string "^0.3.0"
 
 color@^0.11.0:
   version "0.11.4"
@@ -2351,15 +2316,6 @@ css-animation@1.x, css-animation@^1.3.2, css-animation@^1.5.0:
   dependencies:
     babel-runtime "6.x"
     component-classes "^1.2.5"
-
-css-color-extractor@~0:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/css-color-extractor/-/css-color-extractor-0.0.5.tgz#b737a2553320b837b12e124affae03dd53c4acf2"
-  integrity sha1-tzeiVTMguDexLhJK/64D3VPErPI=
-  dependencies:
-    array-unique "^0.2.1"
-    color "^0.10.1"
-    postcss "^5.0.2"
 
 css-color-function@^1.3.3, css-color-function@~1.3.3:
   version "1.3.3"
@@ -3047,7 +3003,7 @@ entities@^2.0.0:
   resolved "https://registry.yarnpkg.com/entities/-/entities-2.0.0.tgz#68d6084cab1b079767540d80e56a39b423e4abf4"
   integrity sha512-D9f7V0JSRwIxlRI2mjMqufDrRDnx8p+eEOz7aUM9SuvF8gsBzra0/6tbjl1m8eQHrZlYj6PxqE00hZ1SAIKPLw==
 
-errno@^0.1.1, errno@^0.1.3, errno@~0.1.7:
+errno@^0.1.3, errno@~0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/errno/-/errno-0.1.7.tgz#4684d71779ad39af177e3f007996f7c67c852618"
   integrity sha512-MfrRBDWzIWifgq6tJj60gkAwtLNb6sQPlcFrSOflcP1aFmmruKQ2wRnze/8V6kgyz7H3FF8Npzv78mZ7XLLflg==
@@ -4155,7 +4111,7 @@ hash-sum@^1.0.2:
   resolved "https://registry.yarnpkg.com/hash-sum/-/hash-sum-1.0.2.tgz#33b40777754c6432573c120cc3808bbd10d47f04"
   integrity sha1-M7QHd3VMZDJXPBIMw4CLvRDUfwQ=
 
-hash.js@^1.0.0, hash.js@^1.0.3, hash.js@^1.1.5:
+hash.js@^1.0.0, hash.js@^1.0.3:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/hash.js/-/hash.js-1.1.7.tgz#0babca538e8d4ee4a0f8988d68866537a003cf42"
   integrity sha512-taOaskGt4z4SOANNseOviYDvjEJinIkRgmp7LbKP2YTTmVxWBl87s/uzK9r+44BclBSp2X7K1hqeNfz9JbBeXA==
@@ -4394,11 +4350,6 @@ ignore@^5.1.1:
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.4.tgz#84b7b3dbe64552b6ef0eca99f6743dbec6d97adf"
   integrity sha512-MzbUSahkTW1u7JpKKjY7LCARd1fU5W2rLdxlM4kdkayuCwZImjkpluF9CM1aLewYJguPDqewLam18Y6AU69A8A==
-
-image-size@~0.5.0:
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
-  integrity sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=
 
 immutable@^3.7.4:
   version "3.8.2"
@@ -5122,11 +5073,6 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
-less-bundle-promise@1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/less-bundle-promise/-/less-bundle-promise-1.0.7.tgz#198d7991ac4f5f3c7862fac1074c7b9aca7b9cb2"
-  integrity sha512-B4mN+YtkOxAPUHyorhup+ETVNZ9E1PO65sPhgPvDDHDVtR1oYRd87EbYVYOsU0Oev0MW/6MSouS5QYlhe7XrzA==
-
 less-loader@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/less-loader/-/less-loader-5.0.0.tgz#498dde3a6c6c4f887458ee9ed3f086a12ad1b466"
@@ -5135,30 +5081,6 @@ less-loader@^5.0.0:
     clone "^2.1.1"
     loader-utils "^1.1.0"
     pify "^4.0.1"
-
-less-plugin-npm-import@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/less-plugin-npm-import/-/less-plugin-npm-import-2.1.0.tgz#823e6986c93318a98171ca858848b6bead55bf3e"
-  integrity sha1-gj5phskzGKmBccqFiEi2vq1Vvz4=
-  dependencies:
-    promise "~7.0.1"
-    resolve "~1.1.6"
-
-less@^3.9.0:
-  version "3.10.2"
-  resolved "https://registry.yarnpkg.com/less/-/less-3.10.2.tgz#49b94da22e18ed112d9500bdb2340969dafee57f"
-  integrity sha512-crOb5r8AnIYkWss6sJNccgb20UqvDfdZhopuDG9LGfcSQY+fAKIA/W4as5+ELnfUxnDruqC7iYyeDZmC44nMnw==
-  dependencies:
-    clone "^2.1.2"
-  optionalDependencies:
-    errno "^0.1.1"
-    graceful-fs "^4.1.2"
-    image-size "~0.5.0"
-    mime "^1.4.1"
-    mkdirp "^0.5.0"
-    promise "^7.1.1"
-    request "^2.83.0"
-    source-map "~0.6.0"
 
 levn@^0.3.0, levn@~0.3.0:
   version "0.3.0"
@@ -6578,14 +6500,6 @@ postcss-colormin@^4.0.3:
     postcss "^7.0.0"
     postcss-value-parser "^3.0.0"
 
-postcss-colors-only@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/postcss-colors-only/-/postcss-colors-only-0.0.3.tgz#24c713c21bfd16c0b2a3e883dd8a1033f4defe49"
-  integrity sha1-JMcTwhv9FsCyo+iD3YoQM/Te/kk=
-  dependencies:
-    css-color-extractor "~0"
-    postcss "^5.0.2"
-
 postcss-convert-values@^2.3.4:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/postcss-convert-values/-/postcss-convert-values-2.6.1.tgz#bbd8593c5c1fd2e3d1c322bb925dcae8dae4d62d"
@@ -7312,7 +7226,7 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6.0, postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.14, postcss@^6.0.17, postcss@^6.0.18, postcss@^6.0.21, postcss@^6.0.22, postcss@^6.0.23, postcss@^6.0.5, postcss@^6.0.6, postcss@^6.0.8:
+postcss@^6.0, postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.14, postcss@^6.0.17, postcss@^6.0.18, postcss@^6.0.22, postcss@^6.0.23, postcss@^6.0.5, postcss@^6.0.6, postcss@^6.0.8:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
   integrity sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==
@@ -7387,13 +7301,6 @@ promise@^7.1.1:
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
   integrity sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==
-  dependencies:
-    asap "~2.0.3"
-
-promise@~7.0.1:
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/promise/-/promise-7.0.4.tgz#363e84a4c36c8356b890fed62c91ce85d02ed539"
-  integrity sha1-Nj6EpMNsg1a4kP7WLJHOhdAu1Tk=
   dependencies:
     asap "~2.0.3"
 
@@ -8259,7 +8166,7 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
-request@^2.83.0, request@^2.87.0, request@^2.88.0:
+request@^2.87.0, request@^2.88.0:
   version "2.88.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   integrity sha512-NAqBSrijGLZdM0WZNsInLJpkJokL72XYjUpnB0iwsRgxh7dB6COrHnTBNwN0E+lHDAJzu7kLAkDeY08z2/A0hg==
@@ -8351,11 +8258,6 @@ resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.11.
   integrity sha512-B/dOmuoAik5bKcD6s6nXDCjzUKnaDvdkRyAk6rsmsKLipWj4797iothd7jmmUhWTfinVMU+wc56rYKsit2Qy4w==
   dependencies:
     path-parse "^1.0.6"
-
-resolve@~1.1.6:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
-  integrity sha1-IDEU2CrSxe2ejgQRs5ModeiJ6Xs=
 
 restore-cursor@^2.0.0:
   version "2.0.0"
@@ -9684,6 +9586,11 @@ vue@^2.5.2:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
+
+vuex@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.1.1.tgz#0c264bfe30cdbccf96ab9db3177d211828a5910e"
+  integrity sha512-ER5moSbLZuNSMBFnEBVGhQ1uCBNJslH9W/Dw2W7GZN23UQA69uapP5GTT9Vm8Trc0PzBSVt6LzF3hGjmv41xcg==
 
 warning@4.x, warning@^4.0.1, warning@^4.0.2, warning@^4.0.3, warning@~4.0.3:
   version "4.0.3"

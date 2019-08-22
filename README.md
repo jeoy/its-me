@@ -22,4 +22,9 @@ npm start
 
 [click here](https://jeoy.github.io/its-me/demo/)
 
+
+### feature
+🎨现在支持新不同主题啦
+<img src='./src/assets/themes.jpg' />
+
  

@@ -1,5 +1,5 @@
 {
-    "name": "马里奥",
+    "name": "端前",
     "bascialEducation": {
         "school": "五道口职业技术学院",
         "major": "计算机系",
@@ -10,7 +10,7 @@
         "name": "HTML5",
         "progress": 65
     }, {
-        "name": "CSS1",
+        "name": "CSS3",
         "progress": 40
     }, {
         "name": "Javascript",
