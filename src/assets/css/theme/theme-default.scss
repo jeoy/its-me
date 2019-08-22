@@ -1,0 +1,34 @@
+@import "css-vars";
+
+@include css-vars((
+    --primary-color: #248f97,
+    --primary-color-background: #248f97,
+    --dark-primary-color: #0c4549,
+    --darkest-primary-color: #073235,
+    --light-primary-color: #87c9cd,
+    --light-color: #c5f2f5,
+    --right-pannel-text: #248f97,
+    --icon-color: #c5f2f5,
+    --tag-bg-color: #248f97,
+    --circle-icon-color: #248f97
+));
+
+$css-vars-use-native: true;
+
+
+$right-pannel-background: #f1eee8;
+$text-color: black;
+$title-color: #6b6a7b;
+$left-pannel-text: white;
+$border-color: fade(var(--darkest-primary-color), 33%);
+
+// $primary-color: white;
+// $primary-color-background : black;
+// $text-color: black;
+// $right-pannel-background : white;
+// $title-colo :$text-color;
+// $right-pannel-text: $text-color;
+// $left-pannel-text: $text-color;
+// var(--icon-color): $primary-color;
+// var(--circle-icon-color): #aaa;
+// var(--tag-bg-color): #bbb;

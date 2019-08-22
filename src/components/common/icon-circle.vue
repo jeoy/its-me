@@ -19,8 +19,8 @@ export default {
 };
 </script>
 
-<style lang="less">
-    @import '~src/assets/css/theme.less';
+<style lang="scss">
+    @import '~src/assets/css/theme/theme-default.scss';
 
     .circle {
         display: inline-block;
@@ -30,7 +30,7 @@ export default {
         border-radius: 50%;
 
         i {
-            color: @circle-icon-color;
+            color: var(--circle-icon-color);
         }
 
         .container {

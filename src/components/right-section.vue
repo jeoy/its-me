@@ -48,8 +48,8 @@ export default {
 };
 </script>
 
-<style lang="less">
-@import '~src/assets/css/theme.less';
+<style lang="scss">
+@import '~src/assets/css/theme/theme-default.scss';
 
 .right-section {
     position: relative;
@@ -58,13 +58,13 @@ export default {
         position: absolute;
         left: -32px;
         top: 3px;
-        color: @right-pannel-text;
+        color: var(--right-pannel-text);
         font-size: 25px;
     }
 
     .title {
         font-size: 30px;
-        color: @title-color;
+        color: $title-color;
     }
 
     .project-block {
@@ -76,13 +76,13 @@ export default {
 
         .project-name {
             font-size: 20px;
-            color: @right-pannel-text;
+            color: var(--right-pannel-text);
             margin-bottom: 6px;
         }
 
         .project-date-range {
             font-size: 14px;
-            color: @right-pannel-text;
+            color: var(--right-pannel-text);
             margin-bottom: 4px;
         }
 

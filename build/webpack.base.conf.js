@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+// const AntDesignThemePlugin = require('antd-theme-webpack-plugin');
 
 function resolve(dir) {
     return path.join(__dirname, '..', dir)

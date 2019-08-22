@@ -7,8 +7,8 @@
     </div>
 </template>
 
-<style lang="less">
-@import '~src/assets/css/theme.less';
+<style lang="scss">
+@import '~src/assets/css/theme/theme-default.scss';
 
 .skill-progress {
     width: 80%;
@@ -24,7 +24,7 @@
         margin: 0px auto;
         text-align: center;
         transform: translateX(10%);
-        color: @light-color;
+        color: var(--light-color);
 
         p {
             font-weight: 700;

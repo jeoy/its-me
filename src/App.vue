@@ -1,7 +1,7 @@
 <template>
 <div id="app">
-    <tool-panel @changeTheme="changeTheme"></tool-panel>
-    <main-page :class="theme"></main-page>
+    <tool-panel ></tool-panel>
+    <main-page ></main-page>
 </div>
 </template>
 
@@ -21,13 +21,9 @@ export default {
         toolPanel
     },
     methods: {
-        changeTheme() {
-            this.theme = 'theme-dark-blue';
-        }
     }
 };
 </script>
-
-<style lang="less">
-    @import "./App.less";
+<style lang="scss">
+    @import "./App.scss";
 </style>

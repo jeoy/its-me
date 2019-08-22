@@ -47,8 +47,8 @@ export default {
 };
 </script>
 
-<style lang="less">
-    @import '~src/assets/css/theme.less';
+<style lang="scss">
+    @import '~src/assets/css/theme/theme-default.scss';
 
     .foot {
         position: absolute;
@@ -58,7 +58,7 @@ export default {
         .foot-list {
             align-items: center;
             display: flex;
-            color: @left-pannel-text;
+            color: $left-pannel-text;
             padding-right: 20px;
             margin-bottom: 16px;
 

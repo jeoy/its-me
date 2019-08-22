@@ -1,4 +1,4 @@
-t<template>
+<template>
     <div class="right-detail">
         <div v-for="project in projects" :key="project.title.name">
             <right-section :projectData="project.data" :title="project.title"></right-section>
@@ -28,11 +28,11 @@ export default {
 };
 </script>
 
-<style lang="less">
-    @import '~src/assets/css/theme.less';
+<style lang="scss">
+    @import '~src/assets/css/theme/theme-default.scss';
 
     .right-detail {
-        background: @right-pannel-background;
+        background: $right-pannel-background;
         padding-top: 60px;
         padding-left: 50px;
         padding-right: 40px;
