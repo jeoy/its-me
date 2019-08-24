@@ -5,10 +5,12 @@ import App from './App';
 import store from './vuex/vuex';
 import './assets/css/iconfont/iconfont.css';
 import {
-    Button
+    Button,
+    Radio
 } from 'ant-design-vue';
 
 Vue.use(Button);
+Vue.use(Radio);
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

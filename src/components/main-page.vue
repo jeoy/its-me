@@ -1,5 +1,5 @@
 <template>
-    <div class="main-page">
+    <div class="main-page printable">
         <left-base class="left-pannel pannel"></left-base>
         <right-detail class="right-pannel pannel"></right-detail>
 
