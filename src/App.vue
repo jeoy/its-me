@@ -7,7 +7,7 @@
 
 <script>
 import mainPage from './components/main-page';
-import toolPanel from './components/tool-panel';
+import toolPanel from './components/tool-panel/container';
 
 export default {
     name: 'App',

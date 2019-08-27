@@ -14,6 +14,16 @@ const colorRGBtoHex = (color) => {
         return color;
     }
     var [r, g, b] = color;
+    function uniform(val) {
+        if (val > 255) {
+            return 255;
+        } else if (val < 0) {
+            return 0;
+        } else {
+            return val;
+        }
+    }
+    [r, g, b] = [uniform(r), uniform(g), uniform(b)];
     var hex = '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     return hex;
 };
@@ -73,6 +83,23 @@ const RGBToHSL = (color) => {
 function HSLToRGB(color) {
     // Must be fractions of 1
     let [h, s, l] = color;
+    if (h > 360) {
+        h = 360;
+    } else if (h < 0) {
+        h = 0;
+    }
+
+    if (s > 100) {
+        s = 100;
+    } else if (s < 0) {
+        s = 0;
+    }
+
+    if (l > 100) {
+        l = 100;
+    } else if (l < 0) {
+        l = 0;
+    }
     s /= 100;
     l /= 100;
 
@@ -130,7 +157,9 @@ const colorMinus = (color1, color2) => {
 const HSLRotate = (color1, distance) => {
     const colorArr1 = HexToHSL(color1);
     const colorArr2 = distance;
-    return colorRGBtoHex(HSLToRGB(colorArr1.map((item, index) => item + colorArr2[index])));
+    return colorRGBtoHex(HSLToRGB(colorArr1.map((item, index) => {
+        return item + colorArr2[index];
+    })));
 };
 
 const getGradientColors = (color, datas) => {
@@ -163,6 +192,7 @@ const getGradientColors = (color, datas) => {
 export {
     getGradientColors,
     colorAdd,
+    HexToHSL,
     HSLRotate,
     colorMinus
 };
