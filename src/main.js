@@ -6,11 +6,13 @@ import store from './vuex/vuex';
 import './assets/css/iconfont/iconfont.css';
 import {
     Button,
-    Radio
+    Radio,
+    Popover
 } from 'ant-design-vue';
 
 Vue.use(Button);
 Vue.use(Radio);
+Vue.use(Popover);
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

@@ -92,6 +92,7 @@ const writeNewStyle = function(originalStyle, colors) {
 };
 
 export {
+    generateColors,
     getIndexStyle,
     updateAndtTheme
 };
