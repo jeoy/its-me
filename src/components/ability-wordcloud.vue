@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import echarts from 'echarts';
 import 'echarts-wordcloud';
 import {
     getGradientColors
@@ -29,6 +28,7 @@ export default {
         })
     },
     mounted() {
+        var echarts = require('echarts/lib/echarts');
         this.chartObj = echarts.init(this.$refs.wordCloud);
         this.renderChart(this.currentTheme);
     },
