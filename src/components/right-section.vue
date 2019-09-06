@@ -2,19 +2,26 @@ t<template>
     <div class="right-section">
         <i class="iconfont title-icon" :class="title.iconName" />
         <div class="title">
-            <p>{{title.name}}</p>
+            <p>{{ title.name }}</p>
         </div>
-        <div class="project-block" v-for="project in projectData" :key="project.dateRange">
+        <div
+            class="project-block"
+            v-for="project in projectData"
+            :key="project.dateRange"
+        >
             <div class="project-name">
-                <span>{{project.name}}</span>
+                <span>{{ project.name }}</span>
             </div>
             <div class="project-date-range">
-                <span>{{project.dateRange}}</span>
+                <span>{{ project.dateRange }}</span>
             </div>
-            <div class="project-tag" >
-                <tag v-for="tag in project.tags" :key="tag" :name="tag" ></tag>
+            <div class="project-tag">
+                <tag v-for="tag in project.tags" :key="tag" :name="tag"></tag>
             </div>
-            <div class="project-context" :class="{'context-indent': project.contextIndent}">
+            <div
+                class="project-context"
+                :class="{ 'context-indent': project.contextIndent }"
+            >
                 <span v-html="project.context"></span>
             </div>
         </div>
@@ -37,14 +44,10 @@ export default {
         }
     },
     data() {
-        return {
-        };
+        return {};
     },
-    computed: {
-
-    },
-    created() {
-    }
+    computed: {},
+    created() {}
 };
 </script>
 
@@ -95,5 +98,4 @@ export default {
         }
     }
 }
-
 </style>

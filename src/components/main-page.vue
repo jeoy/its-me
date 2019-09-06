@@ -2,7 +2,6 @@
     <div class="main-page printable">
         <left-base class="left-pannel pannel"></left-base>
         <right-detail class="right-pannel pannel"></right-detail>
-
     </div>
 </template>
 
@@ -19,7 +18,6 @@ export default {
 </script>
 
 <style>
-
 .main-page {
     width: 800px;
     height: 1130px;

@@ -1,5 +1,5 @@
 {
-    "name": "钱端",
+    "name": "史蒂夫",
     "bascialEducation": {
         "school": "五道口职业技术学院",
         "major": "计算机系",
@@ -117,7 +117,7 @@
     }, {
         "title": {
             "name": "工作经历",
-            "iconName": "iconcode"
+            "iconName": "iconwork"
         },
         "data": [{
             "name": "知名互联网公司1",

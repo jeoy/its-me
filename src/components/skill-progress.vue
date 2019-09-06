@@ -1,8 +1,8 @@
 <template>
     <div class="skill-progress">
-        <v-chart class="skill-bar" :options=option />
-        <div class=learning>
-            <p> Learning... </p>
+        <v-chart class="skill-bar" :options="option" />
+        <div class="learning">
+            <p>Learning...</p>
         </div>
     </div>
 </template>
@@ -30,7 +30,6 @@
             font-weight: 700;
             margin-top: -10px;
         }
-
     }
 }
 </style>
@@ -38,12 +37,8 @@
 <script>
 import ECharts from 'vue-echarts';
 import 'echarts/lib/chart/pictorialBar';
-import {
-    colorAdd
-} from 'util/util';
-import {
-    mapGetters
-} from 'vuex';
+import { colorAdd } from 'util/util';
+import { mapGetters } from 'vuex';
 export default {
     components: {
         'v-chart': ECharts
@@ -55,7 +50,8 @@ export default {
     },
     computed: {
         ...mapGetters({
-            currentTheme: 'currentTheme'
+            currentTheme: 'currentTheme',
+            isMonochrome: 'isMonochrome'
         })
     },
     data() {
@@ -65,11 +61,12 @@ export default {
     },
     methods: {
         renderChart(primary) {
-            var catData = this.skills.map(item => item.name);
-            var progress = this.skills.map(item => item.progress);
-            var barColor1 = colorAdd(primary, '#252525');
-            var barColor2 = colorAdd(primary, '#383838');
-            var barBgColor = '#fff';
+            const catData = this.skills.map(item => item.name);
+            const progress = this.skills.map(item => item.progress);
+            const barColor1 = colorAdd(primary, '#252525');
+            const barColor2 = colorAdd(primary, '#383838');
+            const barBgColor = this.isMonochrome ? '#ccc' : '#fff';
+            const axisLabel = this.isMonochrome ? this.currentTheme : '#fff';
             this.option = {
                 xAxis: {
                     show: false,
@@ -87,7 +84,7 @@ export default {
                     axisLabel: {
                         margin: 10,
                         textStyle: {
-                            color: '#fff',
+                            color: axisLabel,
                             fontSize: 12
                         }
                     }
@@ -99,40 +96,42 @@ export default {
                     left: 0,
                     right: 0
                 },
-                series: [{
-                    type: 'pictorialBar',
-                    animationDuration: 0,
-                    symbolRepeat: 'fixed',
-                    color: barBgColor,
-                    symbolMargin: '0%',
-                    symbol: 'rect',
-                    symbolSize: [32, 14],
-                    data: progress
-                }, {
-                    type: 'pictorialBar',
-                    symbol: 'rect',
-                    symbolRepeat: true,
-                    color: barColor1,
-                    symbolMargin: '0%',
-                    symbolClip: true,
-                    symbolSize: [32, 14],
-                    data: progress
-                }, {
-                    type: 'pictorialBar',
-                    symbol: 'path://M20,0,40,0,20,50,0,50z',
-                    symbolRepeat: 'fixed',
-                    color: barColor2,
-                    symbolMargin: '0%',
-                    symbolClip: true,
-                    symbolSize: [30, 14],
-                    data: progress
-                }]
+                series: [
+                    {
+                        type: 'pictorialBar',
+                        animationDuration: 0,
+                        symbolRepeat: 'fixed',
+                        color: barBgColor,
+                        symbolMargin: '0%',
+                        symbol: 'rect',
+                        symbolSize: [32, 14],
+                        data: progress
+                    },
+                    {
+                        type: 'pictorialBar',
+                        symbol: 'rect',
+                        symbolRepeat: true,
+                        color: barColor1,
+                        symbolMargin: '0%',
+                        symbolClip: true,
+                        symbolSize: [32, 14],
+                        data: progress
+                    },
+                    {
+                        type: 'pictorialBar',
+                        symbol: 'path://M20,0,40,0,20,50,0,50z',
+                        symbolRepeat: 'fixed',
+                        color: barColor2,
+                        symbolMargin: '0%',
+                        symbolClip: true,
+                        symbolSize: [30, 14],
+                        data: progress
+                    }
+                ]
             };
         }
     },
-    created() {
-
-    },
+    created() {},
     watch: {
         currentTheme: {
             immediate: true,

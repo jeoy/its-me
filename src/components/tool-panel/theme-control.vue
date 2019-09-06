@@ -1,37 +1,34 @@
 <template>
     <div class="theme-area area">
-        <a-button type="primary" @click="randomTheme">试试手气</a-button>
-        <a-popover
-            trigger="click"
-            v-model="visible"
+        <div class='button-area'>
+            <a-button type="primary" @click="randomTheme">试试手气</a-button>
+            <a-popover trigger="click" v-model="visible">
+                <template slot="content">
+                    <chrome-picker v-model="customColors"></chrome-picker>
+                    <a-button type="primary" @click="changeTheme(customColors.hex)">
+                        确定
+                    </a-button>
+                </template>
+                <a-button type="primary">放着我自己来</a-button>
+            </a-popover>
+            <a-button type="primary" @click="changeToMonochrome()" >我没有钱</a-button>
+        </div>
+        <li
+            class="color-bar"
+            :style="`background-color: ${color}`"
+            v-for="color in colorList"
+            :key="color"
         >
-            <template slot="content">
-                <chrome-picker v-model="customColors"></chrome-picker>
-                <a-button type="primary" @click="changeTheme(customColors.hex)" >确定</a-button>
-            </template>
-            <a-button type="primary">放着我自己来</a-button>
-        </a-popover>
-        <li class="color-bar" :style="`background-color: ${color}`" v-for="color in colorList" :key="color" >
-            {{color}}{{HexToHSL(color)}}
+            {{ color }}
         </li>
     </div>
 </template>
 
 <script>
-import {
-    updateAndtTheme,
-    getIndexStyle
-} from 'src/util/antd-colors';
-import {
-    HexToHSL
-} from 'src/util/util';
-import {
-    generateTheme
-} from 'src/util/theme';
-import {
-    mapActions,
-    mapGetters
-} from 'vuex';
+import { updateAndtTheme, getIndexStyle } from 'src/util/antd-colors';
+import { HexToHSL } from 'src/util/util';
+import { generateTheme } from 'src/util/theme';
+import { mapActions, mapGetters } from 'vuex';
 import { Chrome } from 'vue-color';
 
 export default {
@@ -78,6 +75,7 @@ export default {
         changeTheme(primary) {
             this.updateNewTheme(primary);
             updateAndtTheme(primary, this.originalStyle);
+            this.visible = false;
         },
         updateNewTheme(primary) {
             this.updateCurrentTheme(primary);
@@ -85,9 +83,15 @@ export default {
             const colorList = [];
             Object.keys(this.themeColors).forEach(key => {
                 colorList.push(this.themeColors[key]); // for display;
-                document.documentElement.style.setProperty(key, this.themeColors[key]);
+                document.documentElement.style.setProperty(
+                    key,
+                    this.themeColors[key]
+                );
             });
             this.colorList = new Set(colorList.sort().reverse());
+        },
+        changeToMonochrome() {
+            this.updateNewTheme('#666');
         }
     },
     created() {
@@ -102,25 +106,34 @@ export default {
 </script>
 
 <style lang="scss">
-    .theme-area {
-        .color-bar {
+.theme-area {
+    .color-bar {
+        display: block;
+        height: 40px;
+        width: 200px;
+        line-height: 40px;
+        padding-left: 10px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        color: white;
+        margin-top: 5px;
+    }
+
+    .button-area {
+        margin-bottom: 20px;
+
+        button {
             display: block;
-            height: 40px;
-            width: 200px;
-            line-height: 40px;
-            padding-left: 10px;
-            border-bottom-right-radius: 5px;
-            border-top-right-radius: 5px;
-            color: white;
+            margin-bottom: 5px;
         }
     }
+}
 
-    .ant-popover-inner-content {
-        padding: 0;
+.ant-popover-inner-content {
+    padding: 0;
 
-        .vc-chrome {
-            box-shadow: none;
-        }
+    .vc-chrome {
+        box-shadow: none;
     }
-
+}
 </style>

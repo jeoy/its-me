@@ -1,8 +1,13 @@
 <template>
-    <div class="left-base">
+    <div
+        class="left-base"
+        :style="{ background: isMonochrome ? 'white' : ''}"
+    >
         <div class="header">
             <div class="name flex-center">
-                <p>{{resumeData.name}}</p>
+                <p :style="{ color: isMonochrome ? this.currentTheme : '' }">
+                    {{ resumeData.name }}
+                </p>
             </div>
             <div class="age flex-center">
                 <!-- <span>{{age}}</span> -->
@@ -10,17 +15,19 @@
                 <!-- <span>{{gender}}</span> -->
             </div>
             <div class="education flex-center-column">
-                <p>{{resumeData.bascialEducation.school}}</p>
-                <p>{{resumeData.bascialEducation.major}}</p>
-                <p>{{resumeData.bascialEducation.degree}}</p>
+                <p>{{ resumeData.bascialEducation.school }}</p>
+                <p>{{ resumeData.bascialEducation.major }}</p>
+                <p>{{ resumeData.bascialEducation.degree }}</p>
             </div>
 
             <div class="position flex-center-column">
                 <p>申请职位</p>
-                <p>{{resumeData.applyPosition}}</p>
+                <p>{{ resumeData.applyPosition }}</p>
             </div>
             <skill-progress :skills="resumeData.skillProgress"></skill-progress>
-            <ability-wordcloud :ability="resumeData.abilityWordCloud"></ability-wordcloud>
+            <ability-wordcloud
+                :ability="resumeData.abilityWordCloud"
+            ></ability-wordcloud>
             <foot :contact="resumeData.contact"></foot>
         </div>
     </div>
@@ -31,6 +38,7 @@ import skillProgress from './skill-progress';
 import foot from './foot';
 import resumeData from '../../demo/demoData.json';
 import abilityWordcloud from './ability-wordcloud';
+import { mapGetters } from 'vuex';
 
 export default {
     name: 'left-base-info',
@@ -45,7 +53,10 @@ export default {
         };
     },
     computed: {
-
+        ...mapGetters({
+            currentTheme: 'currentTheme',
+            isMonochrome: 'isMonochrome'
+        })
     },
     created() {}
 };
