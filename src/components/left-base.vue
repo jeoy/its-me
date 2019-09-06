@@ -1,8 +1,13 @@
 <template>
-    <div class="left-base">
+    <div
+        class="left-base"
+        :style="{ background: isMonochrome ? 'white' : ''}"
+    >
         <div class="header">
             <div class="name flex-center">
-                <p>{{ resumeData.name }}</p>
+                <p :style="{ color: isMonochrome ? this.currentTheme : '' }">
+                    {{ resumeData.name }}
+                </p>
             </div>
             <div class="age flex-center">
                 <!-- <span>{{age}}</span> -->
@@ -33,6 +38,7 @@ import skillProgress from './skill-progress';
 import foot from './foot';
 import resumeData from '../../demo/demoData.json';
 import abilityWordcloud from './ability-wordcloud';
+import { mapGetters } from 'vuex';
 
 export default {
     name: 'left-base-info',
@@ -46,7 +52,12 @@ export default {
             resumeData
         };
     },
-    computed: {},
+    computed: {
+        ...mapGetters({
+            currentTheme: 'currentTheme',
+            isMonochrome: 'isMonochrome'
+        })
+    },
     created() {}
 };
 </script>

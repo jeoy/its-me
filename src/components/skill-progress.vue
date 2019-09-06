@@ -50,7 +50,8 @@ export default {
     },
     computed: {
         ...mapGetters({
-            currentTheme: 'currentTheme'
+            currentTheme: 'currentTheme',
+            isMonochrome: 'isMonochrome'
         })
     },
     data() {
@@ -60,11 +61,12 @@ export default {
     },
     methods: {
         renderChart(primary) {
-            var catData = this.skills.map(item => item.name);
-            var progress = this.skills.map(item => item.progress);
-            var barColor1 = colorAdd(primary, '#252525');
-            var barColor2 = colorAdd(primary, '#383838');
-            var barBgColor = '#fff';
+            const catData = this.skills.map(item => item.name);
+            const progress = this.skills.map(item => item.progress);
+            const barColor1 = colorAdd(primary, '#252525');
+            const barColor2 = colorAdd(primary, '#383838');
+            const barBgColor = this.isMonochrome ? '#ccc' : '#fff';
+            const axisLabel = this.isMonochrome ? this.currentTheme : '#fff';
             this.option = {
                 xAxis: {
                     show: false,
@@ -82,7 +84,7 @@ export default {
                     axisLabel: {
                         margin: 10,
                         textStyle: {
-                            color: '#fff',
+                            color: axisLabel,
                             fontSize: 12
                         }
                     }

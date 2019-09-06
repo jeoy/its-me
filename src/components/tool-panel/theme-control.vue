@@ -1,15 +1,18 @@
 <template>
     <div class="theme-area area">
-        <a-button type="primary" @click="randomTheme">试试手气</a-button>
-        <a-popover trigger="click" v-model="visible">
-            <template slot="content">
-                <chrome-picker v-model="customColors"></chrome-picker>
-                <a-button type="primary" @click="changeTheme(customColors.hex)">
-                    确定
-                </a-button>
-            </template>
-            <a-button type="primary">放着我自己来</a-button>
-        </a-popover>
+        <div class='button-area'>
+            <a-button type="primary" @click="randomTheme">试试手气</a-button>
+            <a-popover trigger="click" v-model="visible">
+                <template slot="content">
+                    <chrome-picker v-model="customColors"></chrome-picker>
+                    <a-button type="primary" @click="changeTheme(customColors.hex)">
+                        确定
+                    </a-button>
+                </template>
+                <a-button type="primary">放着我自己来</a-button>
+            </a-popover>
+            <a-button type="primary" @click="changeToMonochrome()" >我没有钱</a-button>
+        </div>
         <li
             class="color-bar"
             :style="`background-color: ${color}`"
@@ -72,6 +75,7 @@ export default {
         changeTheme(primary) {
             this.updateNewTheme(primary);
             updateAndtTheme(primary, this.originalStyle);
+            this.visible = false;
         },
         updateNewTheme(primary) {
             this.updateCurrentTheme(primary);
@@ -85,6 +89,9 @@ export default {
                 );
             });
             this.colorList = new Set(colorList.sort().reverse());
+        },
+        changeToMonochrome() {
+            this.updateNewTheme('#666');
         }
     },
     created() {
@@ -110,6 +117,15 @@ export default {
         border-top-right-radius: 5px;
         color: white;
         margin-top: 5px;
+    }
+
+    .button-area {
+        margin-bottom: 20px;
+
+        button {
+            display: block;
+            margin-bottom: 5px;
+        }
     }
 }
 
