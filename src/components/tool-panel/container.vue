@@ -6,7 +6,9 @@
                 <a-radio :value="1">打印简历</a-radio>
             </a-radio-group>
             <div>
-                <a-button type="primary" @click="printResume">打印简历</a-button>
+                <a-button type="primary" @click="printResume">
+                    打印简历
+                </a-button>
             </div>
         </div>
         <theme-control></theme-control>
@@ -40,12 +42,12 @@ export default {
             html2canvas(resumeDom).then(function(canvas) {
                 var contentWidth = canvas.width;
                 var contentHeight = canvas.height;
-                var pageHeight = contentWidth / 592.28 * 841.89;
+                var pageHeight = (contentWidth / 592.28) * 841.89;
                 var leftHeight = contentHeight;
 
                 var position = 0;
                 var imgWidth = 595.28;
-                var imgHeight = 595.28 / contentWidth * contentHeight;
+                var imgHeight = (595.28 / contentWidth) * contentHeight;
 
                 var pageData = canvas.toDataURL('image/jpeg', 1.0);
                 var pdf = new JsPDF('', 'pt', 'a4');
@@ -55,7 +57,14 @@ export default {
                     pdf.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight);
                 } else {
                     while (leftHeight > 0) {
-                        pdf.addImage(pageData, 'JPEG', 0, position + 0, imgWidth, imgHeight);
+                        pdf.addImage(
+                            pageData,
+                            'JPEG',
+                            0,
+                            position + 0,
+                            imgWidth,
+                            imgHeight
+                        );
                         leftHeight -= pageHeight;
                         position -= 841.89;
 
@@ -72,7 +81,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .tool-panel {
     position: absolute;
 

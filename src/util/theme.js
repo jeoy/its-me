@@ -1,5 +1,6 @@
 import {
-    HSLRotate
+    HSLRotate,
+    colorAdd
 } from './util';
 
 function generateTheme(primaryColor) {
@@ -13,7 +14,9 @@ function generateTheme(primaryColor) {
         '--right-pannel-text': primaryColor,
         '--icon-color': HSLRotate(primaryColor, [0, 10, 50]),
         '--tag-bg-color': primaryColor,
-        '--circle-icon-color': primaryColor
+        '--circle-icon-color': primaryColor,
+        '--ability-cloud-start': HSLRotate(primaryColor, [5, 0, 5]),
+        '--skill-progress2': colorAdd(primaryColor, '#383838')
     };
 }
 

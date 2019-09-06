@@ -1,8 +1,8 @@
 <template>
     <div class="skill-progress">
-        <v-chart class="skill-bar" :options=option />
-        <div class=learning>
-            <p> Learning... </p>
+        <v-chart class="skill-bar" :options="option" />
+        <div class="learning">
+            <p>Learning...</p>
         </div>
     </div>
 </template>
@@ -30,7 +30,6 @@
             font-weight: 700;
             margin-top: -10px;
         }
-
     }
 }
 </style>
@@ -38,12 +37,8 @@
 <script>
 import ECharts from 'vue-echarts';
 import 'echarts/lib/chart/pictorialBar';
-import {
-    colorAdd
-} from 'util/util';
-import {
-    mapGetters
-} from 'vuex';
+import { colorAdd } from 'util/util';
+import { mapGetters } from 'vuex';
 export default {
     components: {
         'v-chart': ECharts
@@ -99,40 +94,42 @@ export default {
                     left: 0,
                     right: 0
                 },
-                series: [{
-                    type: 'pictorialBar',
-                    animationDuration: 0,
-                    symbolRepeat: 'fixed',
-                    color: barBgColor,
-                    symbolMargin: '0%',
-                    symbol: 'rect',
-                    symbolSize: [32, 14],
-                    data: progress
-                }, {
-                    type: 'pictorialBar',
-                    symbol: 'rect',
-                    symbolRepeat: true,
-                    color: barColor1,
-                    symbolMargin: '0%',
-                    symbolClip: true,
-                    symbolSize: [32, 14],
-                    data: progress
-                }, {
-                    type: 'pictorialBar',
-                    symbol: 'path://M20,0,40,0,20,50,0,50z',
-                    symbolRepeat: 'fixed',
-                    color: barColor2,
-                    symbolMargin: '0%',
-                    symbolClip: true,
-                    symbolSize: [30, 14],
-                    data: progress
-                }]
+                series: [
+                    {
+                        type: 'pictorialBar',
+                        animationDuration: 0,
+                        symbolRepeat: 'fixed',
+                        color: barBgColor,
+                        symbolMargin: '0%',
+                        symbol: 'rect',
+                        symbolSize: [32, 14],
+                        data: progress
+                    },
+                    {
+                        type: 'pictorialBar',
+                        symbol: 'rect',
+                        symbolRepeat: true,
+                        color: barColor1,
+                        symbolMargin: '0%',
+                        symbolClip: true,
+                        symbolSize: [32, 14],
+                        data: progress
+                    },
+                    {
+                        type: 'pictorialBar',
+                        symbol: 'path://M20,0,40,0,20,50,0,50z',
+                        symbolRepeat: 'fixed',
+                        color: barColor2,
+                        symbolMargin: '0%',
+                        symbolClip: true,
+                        symbolSize: [30, 14],
+                        data: progress
+                    }
+                ]
             };
         }
     },
-    created() {
-
-    },
+    created() {},
     watch: {
         currentTheme: {
             immediate: true,

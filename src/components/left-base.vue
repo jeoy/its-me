@@ -2,7 +2,7 @@
     <div class="left-base">
         <div class="header">
             <div class="name flex-center">
-                <p>{{resumeData.name}}</p>
+                <p>{{ resumeData.name }}</p>
             </div>
             <div class="age flex-center">
                 <!-- <span>{{age}}</span> -->
@@ -10,17 +10,19 @@
                 <!-- <span>{{gender}}</span> -->
             </div>
             <div class="education flex-center-column">
-                <p>{{resumeData.bascialEducation.school}}</p>
-                <p>{{resumeData.bascialEducation.major}}</p>
-                <p>{{resumeData.bascialEducation.degree}}</p>
+                <p>{{ resumeData.bascialEducation.school }}</p>
+                <p>{{ resumeData.bascialEducation.major }}</p>
+                <p>{{ resumeData.bascialEducation.degree }}</p>
             </div>
 
             <div class="position flex-center-column">
                 <p>申请职位</p>
-                <p>{{resumeData.applyPosition}}</p>
+                <p>{{ resumeData.applyPosition }}</p>
             </div>
             <skill-progress :skills="resumeData.skillProgress"></skill-progress>
-            <ability-wordcloud :ability="resumeData.abilityWordCloud"></ability-wordcloud>
+            <ability-wordcloud
+                :ability="resumeData.abilityWordCloud"
+            ></ability-wordcloud>
             <foot :contact="resumeData.contact"></foot>
         </div>
     </div>
@@ -44,9 +46,7 @@ export default {
             resumeData
         };
     },
-    computed: {
-
-    },
+    computed: {},
     created() {}
 };
 </script>

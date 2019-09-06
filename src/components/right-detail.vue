@@ -1,7 +1,10 @@
 <template>
     <div class="right-detail">
         <div v-for="project in projects" :key="project.title.name">
-            <right-section :projectData="project.data" :title="project.title"></right-section>
+            <right-section
+                :projectData="project.data"
+                :title="project.title"
+            ></right-section>
         </div>
     </div>
 </template>
@@ -20,22 +23,19 @@ export default {
             projects: resumeData.projects
         };
     },
-    computed: {
-
-    },
-    created() {
-    }
+    computed: {},
+    created() {}
 };
 </script>
 
 <style lang="scss">
-    @import '~src/assets/css/theme/theme-default.scss';
+@import '~src/assets/css/theme/theme-default.scss';
 
-    .right-detail {
-        background: $right-pannel-background;
-        padding-top: 60px;
-        padding-left: 50px;
-        padding-right: 40px;
-        line-height: 1.4;
-    }
+.right-detail {
+    background: $right-pannel-background;
+    padding-top: 60px;
+    padding-left: 50px;
+    padding-right: 40px;
+    line-height: 1.4;
+}
 </style>
