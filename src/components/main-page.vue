@@ -1,18 +1,30 @@
 <template>
     <div class="main-page printable">
-        <left-base class="left-pannel pannel"></left-base>
-        <right-detail class="right-pannel pannel"></right-detail>
+        <base-info class="left-pannel pannel"></base-info>
+        <experience-detail
+            v-for="(data, index) in projects"
+            :key="index"
+            :projects="data.pageData"
+            :pageIndex="index"
+            class="right-pannel pannel"
+        ></experience-detail>
     </div>
 </template>
 
 <script>
-import leftBase from './left-base';
-import rightDetail from './right-detail';
+import baseInfo from './base-info';
+import experienceDetail from './experience-detail';
+import resumeData from '../../demo/demoData.json';
 
 export default {
     components: {
-        leftBase,
-        rightDetail
+        baseInfo,
+        experienceDetail
+    },
+    data() {
+        return {
+            projects: resumeData.projects
+        };
     }
 };
 </script>
@@ -20,13 +32,17 @@ export default {
 <style>
 .main-page {
     width: 800px;
-    height: 1130px;
+    min-height: 1100px;
+    height: 100%;
     overflow: hidden;
     margin: 0 auto;
 }
 
 .left-pannel {
-    position: relative;
+    position: absolute;
+    z-index: 9999;
+    padding: 20px;
+    padding-top: 40px;
     width: 320px;
     box-sizing: border-box;
 }
@@ -39,8 +55,7 @@ export default {
 
 .pannel {
     float: left;
-    padding: 20px;
-    height: 1140px;
-    padding-top: 40px;
+    height: 100%;
+    min-height: 1100px;
 }
 </style>

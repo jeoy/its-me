@@ -1,8 +1,5 @@
 <template>
-    <div
-        class="left-base"
-        :style="{ background: isMonochrome ? 'white' : ''}"
-    >
+    <div class="left-base">
         <div class="header">
             <div class="name flex-center">
                 <p :style="{ color: isMonochrome ? this.currentTheme : '' }">

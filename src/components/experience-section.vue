@@ -1,8 +1,8 @@
 t<template>
     <div class="right-section">
-        <i class="iconfont title-icon" :class="title.iconName" />
+        <i class="iconfont title-icon" :class="title && title.iconName" />
         <div class="title">
-            <p>{{ title.name }}</p>
+            <p>{{ title && title.name }}</p>
         </div>
         <div
             class="project-block"
@@ -15,13 +15,13 @@ t<template>
             <div class="project-date-range">
                 <span>{{ project.dateRange }}</span>
             </div>
+            <div class="project-title">
+                {{ project.title }}
+            </div>
             <div class="project-tag">
                 <tag v-for="tag in project.tags" :key="tag" :name="tag"></tag>
             </div>
-            <div
-                class="project-context"
-                :class="{ 'context-indent': project.contextIndent }"
-            >
+            <div class="project-context">
                 <span v-html="project.context"></span>
             </div>
         </div>
@@ -90,6 +90,7 @@ export default {
         }
 
         .project-context {
+            margin-top: 10px;
             font-size: 14px;
         }
 

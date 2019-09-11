@@ -1,20 +1,23 @@
 <template>
-    <div :ref="'wordCloud'" class="ability-wordcloud" id="echart-wordcloud"></div>
+    <div
+        :ref="'wordCloud'"
+        class="ability-wordcloud"
+        id="echart-wordcloud"
+    ></div>
 </template>
 
 <script>
 import 'echarts-wordcloud';
-import {
-    getGradientColors
-} from 'util/util';
-import {
-    mapGetters
-} from 'vuex';
+import { getGradientColors } from 'util/util';
+import { mapGetters } from 'vuex';
 
 export default {
     props: {
         ability: {
             type: Array
+        },
+        option: {
+            type: Object
         }
     },
     data() {
@@ -34,7 +37,10 @@ export default {
     },
     methods: {
         renderChart(primary) {
-            var colors = getGradientColors(primary, this.ability.map(item => item.value));
+            var colors = getGradientColors(
+                primary,
+                this.ability.map(item => item.value)
+            );
             var seriesData = this.ability.map((item, ind) => {
                 return {
                     ...item,
@@ -45,21 +51,27 @@ export default {
                     }
                 };
             });
-            this.chartObj.setOption({
-                tooltip: {},
-                series: [{
-                    type: 'wordCloud',
-                    gridSize: 2,
-                    sizeRange: [0, 48],
-                    rotationRange: [0, 0],
-                    rotationStep: 0,
-                    shape: 'circle',
-                    width: 600,
-                    height: 600,
-                    drawOutOfBound: true,
-                    data: seriesData
-                }]
-            });
+            this.chartObj.setOption(
+                Object.assign(
+                    {
+                        series: [
+                            {
+                                type: 'wordCloud',
+                                gridSize: 2,
+                                sizeRange: [0, 48],
+                                rotationRange: [0, 0],
+                                rotationStep: 0,
+                                shape: 'circle',
+                                width: 600,
+                                height: 600,
+                                drawOutOfBound: true,
+                                data: seriesData
+                            }
+                        ]
+                    },
+                    this.option
+                )
+            );
         }
     },
     watch: {
