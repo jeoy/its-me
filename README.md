@@ -32,12 +32,11 @@ npm run build
 ```
 
 ## 自定简历内容
-修改 `/demo/demoData.json` 文件
 
-
+修改 `/src/data/demoData.json` 文件
 
 ### Feature
 
-- 🎨 现在支持新不同主题啦
+-   🎨 现在支持新不同主题啦
 
-- 增加了黑白版(Monochrome), 不用彩印时选择这种方式。
+-   增加了黑白版(Monochrome), 不用彩印时选择这种方式。

@@ -26,7 +26,7 @@
 <script>
 import experienceSection from './experience-section';
 import { mapGetters } from 'vuex';
-import resumeData from '../../demo/demoData.json';
+import resumeData from 'src/data/demoData.json';
 import knowledgeGraph from './knowledge-graph';
 
 export default {

@@ -33,7 +33,7 @@
 <script>
 import skillProgress from './skill-progress';
 import foot from './foot';
-import resumeData from '../../demo/demoData.json';
+import resumeData from 'src/data/demoData.json';
 import abilityWordcloud from './ability-wordcloud';
 import { mapGetters } from 'vuex';
 

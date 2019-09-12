@@ -14,7 +14,7 @@
 <script>
 import baseInfo from './base-info';
 import experienceDetail from './experience-detail';
-import resumeData from '../../demo/demoData.json';
+import resumeData from 'src/data/demoData.json';
 
 export default {
     components: {
