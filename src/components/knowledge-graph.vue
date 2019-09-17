@@ -49,10 +49,6 @@ export default {
     },
     methods: {
         renderChart(primary) {
-            const barColor1 = colorAdd(primary, '#252525');
-            const barColor2 = colorAdd(primary, '#383838');
-            const barBgColor = this.isMonochrome ? '#ccc' : '#fff';
-            const axisLabel = this.isMonochrome ? this.currentTheme : '#fff';
             var themeColors = generateTheme(primary);
             const colorList = [];
             Object.keys(themeColors).forEach(key => {

@@ -43,6 +43,7 @@ module.exports = {
             '@': resolve('src'),
             'src': resolve('src'),
             'util': resolve('src/util'),
+            '@ant-design/icons/lib/dist$': resolve('src/assets/and-design-icon'),
             'components': resolve('src/components'),
         }
     },
