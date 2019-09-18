@@ -1,7 +1,7 @@
 import {
     HSLRotate,
     colorAdd
-} from './util';
+} from './color-util';
 
 function generateTheme(primaryColor) {
     return {

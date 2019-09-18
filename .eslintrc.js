@@ -7,6 +7,7 @@ module.exports = {
     },
     env: {
         es6: true,
+        jest: true,
         browser: true,
     },
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
@@ -53,10 +54,10 @@ module.exports = {
         ],
         semi: ["error", "always"],
         // don't require .vue extension when importing
-        'import/extensions': ['error', 'always', {
-            js: 'never',
-            vue: 'never'
-        }],
+        // 'import/extensions': ['error', 'always', {
+        //     js: 'never',
+        //     vue: 'never'
+        // }],
         // disallow reassignment of function parameters
         // disallow parameter object manipulation except for specific exclusions
         'no-param-reassign': ['error', {

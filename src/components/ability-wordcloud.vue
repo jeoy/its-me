@@ -8,7 +8,7 @@
 
 <script>
 import 'echarts-wordcloud';
-import { getGradientColors } from 'util/util';
+import { getGradientColors } from 'util/color-util';
 import { mapGetters } from 'vuex';
 
 export default {

@@ -26,7 +26,7 @@
 
 <script>
 import { updateAndtTheme, getIndexStyle } from 'src/util/antd-colors';
-import { HexToHSL } from 'src/util/util';
+import { HexToHSL } from 'src/util/color-util';
 import { generateTheme } from 'src/util/theme';
 import { mapActions, mapGetters } from 'vuex';
 import { Chrome } from 'vue-color';

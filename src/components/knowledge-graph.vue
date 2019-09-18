@@ -22,7 +22,7 @@
 <script>
 import ECharts from 'vue-echarts';
 import 'echarts/lib/chart/graph';
-import { colorAdd } from 'util/util';
+import { colorAdd } from 'util/color-util';
 import { mapGetters } from 'vuex';
 import { generateTheme } from 'src/util/theme';
 const graph = require('../data/graph-schema.json');

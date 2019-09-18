@@ -37,7 +37,7 @@
 <script>
 import ECharts from 'vue-echarts';
 import 'echarts/lib/chart/pictorialBar';
-import { colorAdd } from 'util/util';
+import { colorAdd } from 'util/color-util';
 import { mapGetters } from 'vuex';
 export default {
     components: {
