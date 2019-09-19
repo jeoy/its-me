@@ -6,7 +6,7 @@ const localVue = createLocalVue();
 
 localVue.use(Vuex);
 
-describe('Counter', () => {
+describe('baseInfo', () => {
     const getters = {
         currentTheme: () => 'red',
         isMonochrome: () => true
