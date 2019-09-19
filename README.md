@@ -6,7 +6,7 @@
 
 ## Demo
 
-[click here](https://jeoy.github.io/its-me/demo/)
+[click here](https://jeoy.github.io/its-me/)
 
 <img src='./src/assets/themes.jpg' />
 ## 安装方法
