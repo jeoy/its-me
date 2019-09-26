@@ -3,40 +3,41 @@ name: Node CI
 on: [push]
 
 jobs:
-  build:
+    # build:
 
-    runs-on: ubuntu-latest
+    #   runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x]
+    #   strategy:
+    #     matrix:
+    #       node-version: [8.x, 10.x, 12.x]
 
-    steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
-      run: |
-        npm install
-        npm run build --if-present
-        npm test
-      env:
-        CI: true
+    #   steps:
+    #   - uses: actions/checkout@v1
+    #   - name: Use Node.js ${{ matrix.node-version }}
+    #     uses: actions/setup-node@v1
+    #     with:
+    #       node-version: ${{ matrix.node-version }}
+    #   - name: npm install, build, and test
+    #     run: |
+    #       npm install
+    #       npm run build --if-present
+    #       npm test
+    #     env:
+    #       CI: true
 
-  
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v1
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@master
 
-    - name: Build and Deploy
-      uses: jeoy/its-me@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: master # The branch the action should deploy from.
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: build # The folder the action should deploy.
-        BUILD_SCRIPT: npm run build # The build script the action should run prior to deploying.
+            - name: Build and Deploy
+              uses: ./.github/actions/deploy
+              env:
+                  COMMIT_EMAIL: jeoy_z@126.com
+                  COMMIT_NAME: jeoy
+                  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                  BASE_BRANCH: master # The branch the action should deploy from.
+                  DEPLOY_BRANCH: gh-pages # The branch the action should deploy to.
+                  FOLDER: dist # The folder the action should deploy.
+                  BUILD_SCRIPT: yarn && npm run-script build # The build script the action should run prior to deploying.
